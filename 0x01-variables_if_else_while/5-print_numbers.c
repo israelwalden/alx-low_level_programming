@@ -1,21 +1,22 @@
 #include <stdio.h>
+
 /**
  * main -print last digit of n
  * Return: 0 (success)
  */
 int main(void)
 {
-	char a;
+	char letter;
 
-	for ( a= 'a'; a <= 'z'; a++)
+	for (letter = 'a'; letter <= 'z'; letter++)
 
 	{
-	if (a != 'e' && a != 'q')
-	putchar(a);
+	if (letter != 'e' && letter != 'q')
+	putchar(letter);
 	}
 
 	putchar('\n');
 
 	return (0);
 }
-
+	
