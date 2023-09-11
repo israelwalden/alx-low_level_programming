@@ -1,23 +1,15 @@
 #include <stdio.h>
-
 /**
- * main -print last digit of n
+ * main -print decimal numbers
  * Return: 0 (success)
  */
 int main(void)
 {
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-
-	{
-		if (letter != 'e' && letter != 'q')
-		putchar(letter);
+	char number;								
+	for (number = '0'; number <= '9'; number++)			
+	{										putchar(number);
 	}
-
 	putchar('\n');
-
-	return (0);
-}
-
 	
+	return (0);							
+}	
