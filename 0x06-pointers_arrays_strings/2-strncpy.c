@@ -17,7 +17,11 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = src[i];/*append char in second string to first string*/
 		i++;/*increase counter*/
 	}
-	dest[i] = '\0';
+	while(i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 
 	return (dest);
 }
