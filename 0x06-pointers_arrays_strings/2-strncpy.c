@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncopy - copies all char in src to dest
+ * _strncpy - copies all char in src to dest
  * @dest: first sring
  * @src: second string
  * @n: limit on second string
@@ -17,7 +17,7 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = src[i];/*append char in second string to first string*/
 		i++;/*increase counter*/
 	}
-	while(i < n)
+	while (i < n)
 	{
 		dest[i] = '\0';
 		i++;
