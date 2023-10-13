@@ -17,12 +17,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 for (i = 0; i < n ; i++)/*loops n time through argumnets*/
 	{
-	int n = va_args(ptr, int);/*va function to get next integar argument*/
+	int a = va_arg(ptr, int);/*va function to get next integar argument*/
 
-	printf("%d", n);/*print the interger*/
-	if (i < n - 1 && seperator != NULL)/*if not last number and seperat not NULL*/
-		printf("%s", seperator);/*Print the separator*/
+	printf("%d", a);/*print the interger*/
+	if (i < n - 1 && separator != NULL)/*if not last number and seperat not NULL*/
+		printf("%s", separator);/*Print the separator*/
 	}
-va_end(n);/*realse n resources*/
-printf("\n";)/*print newline*/
+va_end(ptr);/*release n resources*/
+printf("\n");/*print newline*/
 }
