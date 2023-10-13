@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <starg.h>
+#include <stdarg.h>
 
 /**
  * print_numbers - prints a variable number of arguments
