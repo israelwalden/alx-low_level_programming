@@ -5,9 +5,8 @@
  * main - print its own name
  * @argc: int number of argumants
  * @argv: char variable arguments
- * Return: integer
+ * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	(void) argc;
