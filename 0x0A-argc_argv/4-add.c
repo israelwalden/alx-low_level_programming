@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
  * main - suma of all interger argumants
@@ -9,14 +9,11 @@
  * Return: 1 if error else 0
  */
 
-int _digits(char *s);
-
 int main(int argc, char *argv[])
 {
 	int sum, i;
 
 	i = 1;
-
 	while (i < argc)/*not zero*/
 	{
 		if (_digits(argv[i]))
@@ -35,7 +32,7 @@ int main(int argc, char *argv[])
 
 /**
  * _digits -checks if numbers
-* @s :pointer to stirng
+ * @s :pointer to stirng
  * Return: returns 0 if digits else 1
  */
 int _digits(char *s)
