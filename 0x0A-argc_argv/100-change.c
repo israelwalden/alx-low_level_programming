@@ -26,7 +26,8 @@ int main(int argc, char **argv)
 		printf("%d\n", 0);
 		return (1);
 	}
-
+	else
+	{
 	coins += amount / 25;
 	amount %= 25;
 
@@ -47,4 +48,6 @@ int main(int argc, char **argv)
 	printf("%d\n", coins);
 
 	return (0);
+	}
 }
+	
