@@ -53,7 +53,7 @@ char *str_concat(char *s1, char *s2)
 		count++;
 	}
 
-	for (j = 0; j < s2[i] != '\0'; j++)
+	for (j = 0; j < l2 + 1; j++)
 	{
 		ptr[count] = s2[j];
 		count++;
