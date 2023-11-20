@@ -16,19 +16,22 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 
 	i = 0;
-
-	if (size > 0)
+	if(size == 0)
 	{
-		/* allocate memory for array of size*/
-		ptr = malloc(sizeof(char) * size);
-
-		while (i < size)
-		{
-			ptr[i] = c;
-			i++;
-		}
-	return (ptr);
+		return (NULL);
+	}
+	
+	ptr = (char *) malloc(sizeof(char) * size);
+	
+	if (ptr == 0)
+	{
+		return (NULL);
 	}
 	else
-		return ('\0');
+	while (i < size)
+	{
+		*(ptr + i) = c;
+		i++;
+	}
+	return (ptr);
 }
