@@ -26,10 +26,16 @@ char *_strdup(char *str)
 	}
 	ptr = (char *) malloc(sizeof(char) * size);
 
+	if (ptr == 0)
+	{
+		return (0);
+	}
 	while (i <  size)
 	{
 		ptr[i] = str[i];
 		i++;
 	}
+	ptr[i] = '\0';
+
 	return (ptr);
 }
