@@ -36,10 +36,13 @@ char *str_concat(char *s1, char *s2)
 	l1 = get_len(s1);
 	l2 = get_len(s2);
 
-	if (l1 == 0 || l2 == 0)
-		return (0);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	ptr = (char *) malloc(sizeof(char) * (l1 + l2 + 1));
+
 	if (ptr == 0)
 		return (NULL);
 
@@ -55,7 +58,6 @@ char *str_concat(char *s1, char *s2)
 		ptr[count] = s2[j];
 		count++;
 	}
-	ptr[count] = '\0';
 
 	return (ptr);
 }
