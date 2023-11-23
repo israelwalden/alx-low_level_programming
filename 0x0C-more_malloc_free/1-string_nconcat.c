@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * string_nconcat - conts tow strings
+ * string_nconcat - contcats two strings
  * @s1: pointer to start of 1st string
  * @s2: pointer to start of 2nd string
+ * @n: int s2 limit
  * Return: returns a pointer to start of the newlly concat string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
