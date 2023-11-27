@@ -1,5 +1,5 @@
 #include <unistd.h>
-#define s __FILE__
+
 int _putchar(char c);
 
 /**
@@ -10,7 +10,7 @@ int _putchar(char c);
 int main(void)
 {
 	int i;
-	char *file_name = s;
+	char *file_name = __FILE__;
 
 	for (i = 0; file_name[i] != '\0'; i++)
 	{
