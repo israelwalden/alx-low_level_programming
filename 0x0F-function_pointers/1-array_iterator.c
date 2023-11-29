@@ -11,6 +11,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	/*loop through size executing action for each elemant in array*/
 	unsigned int i;
+
 	i = 0;
 
 	while (i < size)
