@@ -22,7 +22,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
+	{
+		printf("Error\n");
+		exit(1);
+	}
 	result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
-	printf("%d\n",result);
+	printf("%d\n", result);
 	return (0);
 }
