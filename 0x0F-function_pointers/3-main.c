@@ -15,17 +15,17 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(90);
 	}
 	if (get_op_func(argv[2]) == NULL)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(91);
 	}
 	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(92);
 	}
 	result = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", result);
