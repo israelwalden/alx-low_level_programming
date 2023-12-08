@@ -29,7 +29,7 @@ size_t print_list(const list_t *h)
 			count++;
 		}
 	}
-	printf("[%u] %s\n", p->len, p->str);
+	/*printf("[%u] %s\n", p->len, p->str);*/
 	count++;
 	return (count);
 }
