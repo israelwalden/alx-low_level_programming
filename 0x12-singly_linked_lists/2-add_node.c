@@ -8,26 +8,31 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new;
-	int slen;
+	list_t *temp;
+	int len;
 
-	slen = 0;
-	if (str == NULL)/* return if string is empty*/
-		return (NULL);
+	if (head != NULL && str != NULL)
+	{
+		len  = 0;
 
-	new = malloc(sizeof(list_t));/* allocate mem for new node*/
-	if (new == NULL)
-		return (NULL);
+		while (str[len] != '\0')
+			len++;
 
-	/*add new node address to next of previous node*/
-	if (*head == NULL)
-		new->next = NULL;
-	else
-		new->next = *head;
-	/*filling the new node*/
-	new->str = strdup(str);
-	new->len = strlen(str);
-	*head = new;
+		temp = malloc(sizeof(list_t));
+		if (temp == NULL)
+			return (NULL);
 
-	return (*head);
+		temp->str = strdup(str);
+		temp->len = len;
+		temp->next = *head;
+
+		*head = temp;
+
+		return (temp);
+	}
+
+	return (0);
 }
+
+
+
