@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include <string.h>
-
 #include <stdlib.h>
 
 /**
@@ -25,17 +23,22 @@ if (argc != 2)
 	p[0] = l[(len ^ 59) & 63];
 	for (i = 0, add = 0; i < len; i++)
 		add += argv[1][i];
+
 	p[1] = l[(add ^ 79) & 63];
 	for (i = 0, b = 1; i < len; i++)
 		b *= argv[1][i];
+
 	p[2] = l[(b ^ 85) & 63];
 	for (b = argv[1][0], i = 0; i < len; i++)
 		if ((char)b <= argv[1][i])
+
 	b = argv[1][i];
 	srand(b ^ 14);
 	p[3] = l[rand() & 63];
+
 	for (b = 0, i = 0; i < len; i++)
 		b += argv[1][i] * argv[1][i];
+
 	p[4] = l[(b ^ 239) & 63];
 	for (b = 0, i = 0; (char)i < argv[1][0]; i++)
 		b = rand();
